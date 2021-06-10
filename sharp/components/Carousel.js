@@ -1,10 +1,16 @@
-import styled from '@emotion/native';
+import styled, { css } from '@emotion/native';
 import React from 'react';
-
-const ScrollView = styled.ScrollView`
-	overflow: visible;
-`;
+import { ScrollView } from 'react-native';
 
 export default function CardCarousel({ children }) {
-	return <ScrollView horizontal>{children}</ScrollView>;
+	return (
+		<ScrollView
+			style={css`
+				overflow: visible;
+			`}
+			horizontal
+		>
+			{children}
+		</ScrollView>
+	);
 }
