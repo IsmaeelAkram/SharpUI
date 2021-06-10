@@ -4,6 +4,7 @@ import { View } from 'react-native';
 
 import Button from './sharp/components/Button';
 import Card from './sharp/components/Card';
+import CardCarousel from './sharp/components/CardCarousel';
 import Paragraph from './sharp/components/Paragraph';
 import ProgressBarIOS from './sharp/components/ProgressBarIOS';
 import ScrollView from './sharp/components/ScrollView';
@@ -60,15 +61,26 @@ export default function App() {
 			<ProgressBarIOS progress={0.75}></ProgressBarIOS>
 
 			<Subtitle style={{ marginTop: 20 }}>Cards</Subtitle>
-
-			<Card>
-				<Subtitle>Card #1</Subtitle>
-				<Paragraph>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim neque a elit
-					lobortis, ullamcorper eleifend eros hendrerit. Praesent at dolor gravida, consectetur est
-					placerat, tempor mauris. In vitae ligula eget diam laoreet gravida sit amet at sapien.
-				</Paragraph>
-			</Card>
+			<CardCarousel>
+				<Card carousel>
+					<Subtitle>Card #1</Subtitle>
+					<Paragraph>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim neque a
+						elit lobortis, ullamcorper eleifend eros hendrerit. Praesent at dolor gravida,
+						consectetur est placerat, tempor mauris. In vitae ligula eget diam laoreet gravida sit
+						amet at sapien.
+					</Paragraph>
+				</Card>
+				<Card carousel>
+					<Subtitle>Card #2</Subtitle>
+					<Paragraph>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim neque a
+						elit lobortis, ullamcorper eleifend eros hendrerit. Praesent at dolor gravida,
+						consectetur est placerat, tempor mauris. In vitae ligula eget diam laoreet gravida sit
+						amet at sapien.
+					</Paragraph>
+				</Card>
+			</CardCarousel>
 
 			{/* <Subtitle style={{ marginTop: 20 }}>Images</Subtitle>
 			<View style={{ marginTop: 7 }}>
