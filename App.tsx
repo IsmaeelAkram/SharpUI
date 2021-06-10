@@ -3,7 +3,6 @@ import React from 'react';
 import { ScrollView, View } from 'react-native';
 
 import Button from './sharp/components/Button';
-import Image from './sharp/components/Image';
 import Paragraph from './sharp/components/Paragraph';
 import ProgressBarIOS from './sharp/components/ProgressBarIOS';
 import Subtitle from './sharp/components/Subtitle';
