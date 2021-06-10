@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
 import React from 'react';
 
-// TODO: Fix infinite scroll bug
 const ScrollView = styled.ScrollView`
 	overflow: visible;
 `;
