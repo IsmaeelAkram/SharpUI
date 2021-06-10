@@ -1,7 +1,6 @@
 import { useFonts } from 'expo-font';
 import React from 'react';
 import { useColorScheme, View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
 
 import Button from './sharp/components/Button';
 import Card from './sharp/components/Card';
@@ -13,18 +12,12 @@ import ScrollView from './sharp/components/ScrollView';
 import Subtitle from './sharp/components/Subtitle';
 import TextField from './sharp/components/TextField';
 import Title from './sharp/components/Title';
-import DarkView from './sharp/components/DarkView';
+import ThemeView from './sharp/components/ThemeView';
+import fonts from './sharp/utils/fonts';
 
 export default function App() {
-	let colorScheme = useColorScheme();
-	const [loaded, error] = useFonts({
-		PlusJakartaSansRegular: require('./sharp/fonts/PlusJakartaSans-Regular.ttf'),
-		PlusJakartaSansItalic: require('./sharp/fonts/PlusJakartaSans-Italic.ttf'),
-		PlusJakartaSansMedium: require('./sharp/fonts/PlusJakartaSans-Medium.ttf'),
-		PlusJakartaSansMediumItalic: require('./sharp/fonts/PlusJakartaSans-MediumItalic.ttf'),
-		PlusJakartaSansBold: require('./sharp/fonts/PlusJakartaSans-Bold.ttf'),
-		PlusJakartaSansBoldItalic: require('./sharp/fonts/PlusJakartaSans-BoldItalic.ttf'),
-	});
+	// let colorScheme = useColorScheme();
+	const [loaded, error] = useFonts(fonts);
 
 	if (!loaded) {
 		return null;
@@ -38,8 +31,7 @@ export default function App() {
 	}
 
 	return (
-		<DarkView>
-			<StatusBar style={colorScheme == 'dark' ? 'light' : 'dark'} />
+		<ThemeView>
 			<ScrollView>
 				<Title>Sharp UI</Title>
 
@@ -98,6 +90,6 @@ export default function App() {
 					placerat, tempor mauris. In vitae ligula eget diam laoreet gravida sit amet at sapien.
 				</Paragraph>
 			</ScrollView>
-		</DarkView>
+		</ThemeView>
 	);
 }
