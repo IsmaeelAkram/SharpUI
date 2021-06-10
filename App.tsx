@@ -6,7 +6,7 @@ import Button from './sharp/components/Button';
 import Card from './sharp/components/Card';
 import CardCarousel from './sharp/components/CardCarousel';
 import Paragraph from './sharp/components/Paragraph';
-import ProgressBarIOS from './sharp/components/ProgressBarIOS';
+import ProgressBar from './sharp/components/ProgressBar';
 import ScrollView from './sharp/components/ScrollView';
 import Subtitle from './sharp/components/Subtitle';
 import TextField from './sharp/components/TextField';
@@ -53,12 +53,13 @@ export default function App() {
 				</Button>
 			</View>
 
-			<Subtitle style={{ marginTop: 20 }}>Text Field</Subtitle>
-			<TextField placeholder="Username" raw />
-			<TextField placeholder="Password" password raw />
+			<Subtitle style={{ marginTop: 20 }}>Text Fields</Subtitle>
+			<TextField type="email" placeholder="E-mail" raw />
+			<TextField type="password" placeholder="Password" password raw />
 
-			<Subtitle style={{ marginTop: 20 }}>Progress Bar</Subtitle>
-			<ProgressBarIOS progress={0.75}></ProgressBarIOS>
+			<Subtitle style={{ marginTop: 20 }}>Progress Bars</Subtitle>
+			<ProgressBar progress={.8} />
+			<ProgressBar indeterminate />
 
 			<Subtitle style={{ marginTop: 20 }}>Cards</Subtitle>
 			<CardCarousel>

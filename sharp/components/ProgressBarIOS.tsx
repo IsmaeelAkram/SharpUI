@@ -6,6 +6,9 @@ interface props {
 	progress: number;
 }
 
+/**
+ * @deprecated Use `ProgressBar` instead.
+ */
 export default function ({ progress }: props) {
 	return (
 		<ProgressViewIOS
