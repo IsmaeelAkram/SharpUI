@@ -5,6 +5,6 @@ export default styled.TouchableOpacity`
 	border-radius: 10px;
 	padding: 15px;
 	shadow-color: #000;
-	shadow-opacity: 0.1;
+	shadow-opacity: 0.075;
 	shadow-radius: 10px;
 `;
