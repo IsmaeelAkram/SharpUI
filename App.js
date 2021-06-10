@@ -6,7 +6,7 @@ import styled, { css } from '@emotion/native';
 import Button from './sharp/components/Button';
 import Card from './sharp/components/Card';
 import Image from './sharp/components/Image';
-import CardCarousel from './sharp/components/CardCarousel';
+import Carousel from './sharp/components/Carousel';
 import Paragraph from './sharp/components/Paragraph';
 import ProgressBar from './sharp/components/ProgressBar';
 import ScrollView from './sharp/components/ScrollView';
@@ -103,7 +103,7 @@ export default function App() {
 				>
 					Cards
 				</Subtitle>
-				<CardCarousel>
+				<Carousel>
 					<Card carousel>
 						<Subtitle>Card #1</Subtitle>
 						<Paragraph>
@@ -122,7 +122,7 @@ export default function App() {
 							amet at sapien.
 						</Paragraph>
 					</Card>
-				</CardCarousel>
+				</Carousel>
 
 				<Subtitle
 					style={css`
@@ -132,12 +132,13 @@ export default function App() {
 					Images
 				</Subtitle>
 
-				<Image source={{ uri: 'https://via.placeholder.com/500x500.png' }} />
-				<Paragraph>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim neque a elit
-					lobortis, ullamcorper eleifend eros hendrerit. Praesent at dolor gravida, consectetur est
-					placerat, tempor mauris. In vitae ligula eget diam laoreet gravida sit amet at sapien.
-				</Paragraph>
+				<Image
+					style={css`
+						width: 150px;
+						height: 100px;
+					`}
+					source={{ uri: 'https://via.placeholder.com/300x200.png' }}
+				/>
 			</ScrollView>
 		</ThemeView>
 	);
