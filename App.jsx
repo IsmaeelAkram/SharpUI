@@ -9,6 +9,7 @@ import CardCarousel from './sharp/components/CardCarousel';
 import Paragraph from './sharp/components/Paragraph';
 import ProgressBar from './sharp/components/ProgressBar';
 import ScrollView from './sharp/components/ScrollView';
+import FlatList from './sharp/components/FlatList';
 import Subtitle from './sharp/components/Subtitle';
 import TextField from './sharp/components/TextField';
 import Title from './sharp/components/Title';
@@ -26,9 +27,9 @@ export default function App() {
 	}
 	if (error) {
 		return (
-			<View style={{ marginTop: 80, marginLeft: 15 }}>
+			<ScrollView>
 				<Title>Error loading fonts</Title>
-			</View>
+			</ScrollView>
 		);
 	}
 

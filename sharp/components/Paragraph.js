@@ -1,4 +1,4 @@
-// import styled from 'styled-components/native';
+// import styled from '@emotion/native';
 // import React from 'react';
 
 // export default styled.Text`
