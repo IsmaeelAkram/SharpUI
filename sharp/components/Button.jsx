@@ -1,14 +1,7 @@
 import React from 'react';
-import { TouchableOpacity, Text, View } from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 
-interface props {
-	children: any;
-	dark?: boolean;
-	width?: number;
-	onPress?: () => void;
-}
-
-export default function ({ children, dark, width, onPress }: props) {
+export default function ({ children, dark, width, onPress }) {
 	return (
 		<TouchableOpacity
 			style={{

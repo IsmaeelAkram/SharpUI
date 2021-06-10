@@ -5,10 +5,6 @@ const ScrollView = styled.ScrollView`
 	overflow: visible;
 `;
 
-interface props {
-	children: any;
-}
-
-export default function CardCarousel({ children }: props) {
+export default function CardCarousel({ children }) {
 	return <ScrollView horizontal>{children}</ScrollView>;
 }

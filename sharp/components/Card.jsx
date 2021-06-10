@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
-import PropTypes from 'prop-types';
+import { Appearance } from 'react-native';
 
 const Card = styled.TouchableOpacity`
-	background-color: #fff;
+	background-color: ${Appearance.getColorScheme() == 'dark' ? '#131313' : '#fff'};
 	border-radius: 10px;
 	padding: 15px;
 	shadow-color: #000;
@@ -11,7 +11,4 @@ const Card = styled.TouchableOpacity`
 	max-width: 100%;
 	${(props) => (props.carousel ? 'margin-right: 20px' : '')}
 `;
-Card.propTypes = {
-	children: PropTypes.any,
-};
 export default Card;

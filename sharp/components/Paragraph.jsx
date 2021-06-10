@@ -8,15 +8,9 @@
 
 import React from 'react';
 import { Text } from 'react-native';
+import { Appearance } from 'react-native';
 
-interface props {
-	children: any;
-	bold?: boolean;
-	italic?: boolean;
-	size?: number;
-}
-
-export default function ({ children, bold, italic, size }: props) {
+export default function ({ children, bold, italic, size }) {
 	let font = 'PlusJakartaSansRegular';
 	if (bold && !italic) {
 		font = 'PlusJakartaSansBold';
@@ -29,6 +23,7 @@ export default function ({ children, bold, italic, size }: props) {
 	return (
 		<Text
 			style={{
+				color: Appearance.getColorScheme() == 'dark' ? '#fff' : '#000',
 				fontFamily: font,
 				fontSize: size,
 			}}
