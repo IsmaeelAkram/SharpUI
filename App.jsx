@@ -14,6 +14,7 @@ import TextField from './sharp/components/TextField';
 import Title from './sharp/components/Title';
 import ThemeView from './sharp/components/ThemeView';
 import fonts from './sharp/utils/fonts';
+import Checkbox from './sharp/components/Checkbox';
 
 export default function App() {
 	LogBox.ignoreAllLogs();
@@ -59,6 +60,9 @@ export default function App() {
 				<Subtitle style={{ marginTop: 20 }}>Progress Bars</Subtitle>
 				<ProgressBar progress={0.8} />
 				<ProgressBar indeterminate />
+
+				<Subtitle style={{ marginTop: 20 }}>Checkboxes</Subtitle>
+				<Checkbox onChange={(checked) => alert(checked)}>Cool checkbox</Checkbox>
 
 				<Subtitle style={{ marginTop: 20 }}>Cards</Subtitle>
 				<CardCarousel>
