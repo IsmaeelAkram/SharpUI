@@ -21,9 +21,9 @@
 			"supportsTablet": true
 		},
 		"android": {
+			"package": "com.ismaeelakram.SharpUI",
+			"versionCode": 1,
 			"adaptiveIcon": {
-				"package": "com.ismaeelakram.SharpUI",
-				"versionCode": 1,
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#FFFFFF"
 			}
