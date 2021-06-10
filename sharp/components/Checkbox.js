@@ -7,7 +7,10 @@ export default function Checkbox({ children, onChange = (checked) => {} }) {
 	const [checked, setChecked] = useState(false);
 	return (
 		<TouchableOpacity
-			style={{ display: 'flex', flexDirection: 'row' }}
+			style={css`
+				display: flex;
+				flex-direction: row;
+			`}
 			onPress={() => {
 				onChange(!checked);
 				setChecked(!checked);

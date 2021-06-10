@@ -1,3 +1,4 @@
+import styled, { css } from '@emotion/native';
 import React from 'react';
 import { TextInput } from 'react-native';
 import { Appearance } from 'react-native';
@@ -11,14 +12,14 @@ export default function ({ placeholder, password, raw, type }) {
 			autoCapitalize={raw ? 'none' : 'sentences'}
 			autoCorrect={raw ? false : true}
 			autoCompleteType={type || 'none'}
-			style={{
-				marginTop: 5,
-				fontFamily: 'PlusJakartaSansMedium',
-				fontSize: 16,
-				backgroundColor: Appearance.getColorScheme() == 'dark' ? '#373737' : '#ededed',
-				padding: 10,
-				borderRadius: 7,
-			}}
+			style={css`
+				margin-top: 5px;
+				font-family: 'PlusJakartaSansMedium';
+				font-size: 16px;
+				background-color: ${Appearance.getColorScheme() == 'dark' ? '#373737' : '#ededed'};
+				padding: 10px;
+				border-radius: 7px;
+			`}
 		></TextInput>
 	);
 }

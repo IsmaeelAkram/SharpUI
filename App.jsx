@@ -1,6 +1,7 @@
 import { useFonts } from 'expo-font';
 import React from 'react';
 import { LogBox, useColorScheme, View } from 'react-native';
+import styled, { css } from '@emotion/native';
 
 import Button from './sharp/components/Button';
 import Card from './sharp/components/Card';
@@ -38,13 +39,25 @@ export default function App() {
 			<ScrollView>
 				<Title>Sharp UI</Title>
 
-				<Subtitle style={{ marginTop: 20 }}>Why Sharp?</Subtitle>
+				<Subtitle
+					style={css`
+						margin-top: 20px;
+					`}
+				>
+					Why Sharp?
+				</Subtitle>
 				<Paragraph>
 					<Paragraph bold>Sharp UI</Paragraph> is an <Paragraph italic>amazing</Paragraph> React
 					Native UI library made by Ismaeel Akram. It's very customizable, elegant, and fast.
 				</Paragraph>
 
-				<Subtitle style={{ marginTop: 20 }}>Buttons</Subtitle>
+				<Subtitle
+					style={css`
+						margin-top: 20px;
+					`}
+				>
+					Buttons
+				</Subtitle>
 				<View style={{ flexDirection: 'row' }}>
 					<Button width={120} dark onPress={() => alert("I'm a dark button!")}>
 						Dark button
@@ -54,18 +67,42 @@ export default function App() {
 					</Button>
 				</View>
 
-				<Subtitle style={{ marginTop: 20 }}>Text Fields</Subtitle>
+				<Subtitle
+					style={css`
+						margin-top: 20px;
+					`}
+				>
+					Text Fields
+				</Subtitle>
 				<TextField type="email" placeholder="E-mail" raw />
 				<TextField type="password" placeholder="Password" password raw />
 
-				<Subtitle style={{ marginTop: 20 }}>Progress Bars</Subtitle>
+				<Subtitle
+					style={css`
+						margin-top: 20px;
+					`}
+				>
+					Progress Bars
+				</Subtitle>
 				<ProgressBar progress={0.8} />
 				<ProgressBar indeterminate />
 
-				<Subtitle style={{ marginTop: 20 }}>Checkboxes</Subtitle>
+				<Subtitle
+					style={css`
+						margin-top: 20px;
+					`}
+				>
+					Checkboxes
+				</Subtitle>
 				<Checkbox onChange={(checked) => alert(checked)}>Cool checkbox</Checkbox>
 
-				<Subtitle style={{ marginTop: 20 }}>Cards</Subtitle>
+				<Subtitle
+					style={css`
+						margin-top: 20px;
+					`}
+				>
+					Cards
+				</Subtitle>
 				<CardCarousel>
 					<Card carousel>
 						<Subtitle>Card #1</Subtitle>
@@ -87,7 +124,13 @@ export default function App() {
 					</Card>
 				</CardCarousel>
 
-				<Subtitle style={{ marginTop: 20 }}>Images</Subtitle>
+				<Subtitle
+					style={css`
+						margin-top: 20px;
+					`}
+				>
+					Images
+				</Subtitle>
 
 				<Image source={{ uri: 'https://via.placeholder.com/500x500.png' }} />
 				<Paragraph>

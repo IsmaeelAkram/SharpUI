@@ -8,7 +8,9 @@ export default function ({ progress }) {
 		<ProgressViewIOS
 			progress={progress}
 			progressTintColor="#000"
-			style={{ transform: [{ scaleY: 1.25 }] }}
+			style={css`
+				transform: scaleY(1.25);
+			`}
 		></ProgressViewIOS>
 	);
 }

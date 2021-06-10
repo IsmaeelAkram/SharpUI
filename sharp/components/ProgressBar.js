@@ -1,6 +1,8 @@
+import styled, { css } from '@emotion/native';
 import React from 'react';
 import * as Progress from 'expo-progress';
 import { Appearance } from 'react-native';
+
 export default function ProgressBar({
 	progress,
 	color = Appearance.getColorScheme() == 'dark' ? '#fff' : '#373737',
@@ -10,7 +12,9 @@ export default function ProgressBar({
 }) {
 	return (
 		<Progress.Bar
-			style={{ marginBottom: 4 }}
+			style={css`
+				margin-bottom: 4px;
+			`}
 			color={color}
 			trackColor={trackColor}
 			height={5}

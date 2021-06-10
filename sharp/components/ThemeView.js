@@ -1,3 +1,4 @@
+import styled, { css } from '@emotion/native';
 import { useColorScheme, View } from 'react-native';
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
@@ -7,7 +8,11 @@ export default function ThemeView({ children }) {
 	return (
 		<>
 			<StatusBar style={colorScheme == 'dark' ? 'light' : 'dark'} />
-			<View style={{ backgroundColor: colorScheme == 'dark' ? '#131313' : '#fff' }}>
+			<View
+				style={css`
+					background-color: ${colorScheme == 'dark' ? '#131313' : '#fff'};
+				`}
+			>
 				{children}
 			</View>
 		</>

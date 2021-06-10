@@ -1,11 +1,4 @@
-// import styled from '@emotion/native';
-// import React from 'react';
-
-// export default styled.Text`
-// 	font-size: 15px;
-// 	font-family: 'PlusJakartaSansRegular';
-// `;
-
+import styled, { css } from '@emotion/native';
 import React from 'react';
 import { Text } from 'react-native';
 import { Appearance } from 'react-native';
@@ -22,11 +15,11 @@ export default function ({ children, bold, italic, size }) {
 
 	return (
 		<Text
-			style={{
-				color: Appearance.getColorScheme() == 'dark' ? '#fff' : '#000',
-				fontFamily: font,
-				fontSize: size,
-			}}
+			style={css`
+				color: ${Appearance.getColorScheme() == 'dark' ? '#fff' : '#000'};
+				font-family: ${font};
+				font-size: ${size};
+			`}
 		>
 			{children}
 		</Text>
