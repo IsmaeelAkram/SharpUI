@@ -1,6 +1,6 @@
 {
 	"expo": {
-		"name": "SharpUI",
+		"name": "Sharp UI",
 		"slug": "SharpUI",
 		"version": "1.0.0",
 		"orientation": "portrait",
@@ -16,10 +16,14 @@
 		},
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
+			"bundleIdentifier": "com.ismaeelakram.SharpUI",
+			"buildNumber": "1.0.0",
 			"supportsTablet": true
 		},
 		"android": {
 			"adaptiveIcon": {
+				"package": "com.ismaeelakram.SharpUI",
+				"versionCode": 1,
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#FFFFFF"
 			}

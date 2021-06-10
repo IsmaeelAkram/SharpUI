@@ -1,6 +1,6 @@
 import { useFonts } from 'expo-font';
 import React from 'react';
-import { useColorScheme, View } from 'react-native';
+import { LogBox, useColorScheme, View } from 'react-native';
 
 import Button from './sharp/components/Button';
 import Card from './sharp/components/Card';
@@ -16,7 +16,8 @@ import ThemeView from './sharp/components/ThemeView';
 import fonts from './sharp/utils/fonts';
 
 export default function App() {
-	// let colorScheme = useColorScheme();
+	LogBox.ignoreAllLogs();
+	let colorScheme = useColorScheme();
 	const [loaded, error] = useFonts(fonts);
 
 	if (!loaded) {
