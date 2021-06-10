@@ -1,14 +1,14 @@
 import React from 'react';
-import { TouchableOpacity, Text, View, TextInput } from 'react-native';
-import styled, { css } from 'styled-components';
+import { TextInput } from 'react-native';
 
 interface props {
 	placeholder: string;
 	password?: boolean;
 	raw?: boolean;
+	type?: string;
 }
 
-export default function ({ placeholder, password, raw }: props) {
+export default function ({ placeholder, password, raw, type }: props) {
 	return (
 		<TextInput
 			placeholder={placeholder}
@@ -16,6 +16,7 @@ export default function ({ placeholder, password, raw }: props) {
 			secureTextEntry={password}
 			autoCapitalize={raw ? 'none' : 'sentences'}
 			autoCorrect={raw ? false : true}
+			autoCompleteType={type || "none"}
 			style={{
 				marginTop: 5,
 				fontFamily: 'PlusJakartaSansMedium',
