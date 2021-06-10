@@ -4,6 +4,7 @@ import { View } from 'react-native';
 
 import Button from './sharp/components/Button';
 import Card from './sharp/components/Card';
+import Image from './sharp/components/Image';
 import CardCarousel from './sharp/components/CardCarousel';
 import Paragraph from './sharp/components/Paragraph';
 import ProgressBar from './sharp/components/ProgressBar';
@@ -58,7 +59,7 @@ export default function App() {
 			<TextField type="password" placeholder="Password" password raw />
 
 			<Subtitle style={{ marginTop: 20 }}>Progress Bars</Subtitle>
-			<ProgressBar progress={.8} />
+			<ProgressBar progress={0.8} />
 			<ProgressBar indeterminate />
 
 			<Subtitle style={{ marginTop: 20 }}>Cards</Subtitle>
@@ -83,10 +84,14 @@ export default function App() {
 				</Card>
 			</CardCarousel>
 
-			{/* <Subtitle style={{ marginTop: 20 }}>Images</Subtitle>
-			<View style={{ marginTop: 7 }}>
-				<Image source={{ uri: 'https://via.placeholder.com/500x500.png' }} />
-			</View> */}
+			<Subtitle style={{ marginTop: 20 }}>Images</Subtitle>
+
+			<Image source={{ uri: 'https://via.placeholder.com/500x500.png' }} />
+			<Paragraph>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim neque a elit
+				lobortis, ullamcorper eleifend eros hendrerit. Praesent at dolor gravida, consectetur est
+				placerat, tempor mauris. In vitae ligula eget diam laoreet gravida sit amet at sapien.
+			</Paragraph>
 		</ScrollView>
 	);
 }
