@@ -21,8 +21,8 @@ export default function Checkbox({ children, onChange = (checked) => {} }) {
 				style={css`
 					width: 20px;
 					height: 20px;
-					background-color: ${colorScheme == "dark" ? checked ? '#fff' : '#131313' : checked ? '#131313': '#fff'};
-					border-color: ${colorScheme == "dark" ? "#fff" : '#131313'};
+					background-color: ${colorScheme == "dark" ? checked ? '#fff' : '#000' : checked ? '#000': '#fff'};
+					border-color: ${colorScheme == "dark" ? "#fff" : '#000'};
 					border-width: 2px;
 					border-radius: 5px;
 					margin-right: 5px;

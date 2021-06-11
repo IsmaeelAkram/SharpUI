@@ -17,7 +17,7 @@ export default function ({ children, bold, italic, size }) {
 	return (
 		<Text
 			style={css`
-				color: ${colorScheme == 'dark' ? '#fff' : '#131313'};
+				color: ${colorScheme == 'dark' ? '#fff' : '#000'};
 				font-family: ${font};
 				font-size: ${size};
 			`}

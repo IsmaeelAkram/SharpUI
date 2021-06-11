@@ -14,7 +14,7 @@ export default function ProgressBar({
 			style={css`
 				margin-bottom: 4px;
 			`}
-			color={colorScheme == 'dark' ? '#fff' : '#131313'}
+			color={colorScheme == 'dark' ? '#fff' : '#000'}
 			trackColor={colorScheme == 'dark' ? '#373737' : '#ededed'}
 			height={5}
 			progress={progress}

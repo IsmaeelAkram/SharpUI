@@ -10,14 +10,16 @@ export default function ({ children, dark, autoTheme = false, width, onPress }) 
 	return (
 		<TouchableOpacity
 			style={css`
-				background-color: ${dark ? '#131313' : '#ededed'};
-				padding: 7px 10px 7px 10px;
+				background-color: ${dark ? '#000' : '#ededed'};
+				padding: 5px 10px 5px 10px;
 				width: ${width};
 				height: 35px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				border-radius: 7px;
+				border-color: ${dark ? "#373737" : ""};
+				border-width: ${dark ? "1px" : ""};
 				margin-right: 10px;
 			`}
 			onPress={onPress}
