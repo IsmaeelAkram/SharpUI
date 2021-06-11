@@ -63,6 +63,8 @@ export default function App() {
 					</Button>
 					<Button width={120} onPress={() => alert("I'm a light button!")}>
 						Light button
+					</Button><Button width={120} autoTheme onPress={() => alert("I'm a auto button!")}>
+						Auto button
 					</Button>
 				</View>
 

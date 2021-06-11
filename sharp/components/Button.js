@@ -1,8 +1,12 @@
 import React from 'react';
 import styled, { css } from '@emotion/native';
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity, Text, useColorScheme } from 'react-native';
 
-export default function ({ children, dark, width, onPress }) {
+export default function ({ children, dark, autoTheme = false, width, onPress }) {
+	let colorScheme = useColorScheme();
+	if(autoTheme){
+		dark = colorScheme == "dark" ? true : false;
+	}
 	return (
 		<TouchableOpacity
 			style={css`
