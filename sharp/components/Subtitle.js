@@ -8,7 +8,7 @@ export default function Subtitle(props) {
 		<Text
 			{...props}
 			style={css`
-				color: ${colorScheme == 'dark' ? '#fff' : '#000'};
+				color: ${colorScheme == 'dark' ? '#fff' : '#131313'};
 				font-size: 25px;
 				font-family: 'PlusJakartaSansMedium';
 				margin-bottom: 5px;

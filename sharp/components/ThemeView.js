@@ -10,7 +10,7 @@ export default function ThemeView({ children }) {
 			<StatusBar style={colorScheme == 'dark' ? 'light' : 'dark'} />
 			<View
 				style={css`
-					background-color: ${colorScheme == 'dark' ? '#131313' : '#fff'};
+					background-color: ${colorScheme == 'dark' ? '#000000' : '#fff'};
 				`}
 			>
 				{children}

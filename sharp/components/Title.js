@@ -7,7 +7,7 @@ export default function Title(props) {
 	return (
 		<Text
 			style={css`
-				color: ${colorScheme == 'dark' ? '#fff' : '#000'};
+				color: ${colorScheme == 'dark' ? '#fff' : '#131313'};
 				font-size: 40px;
 				font-family: 'PlusJakartaSansBold';
 				margin-bottom: 5px;

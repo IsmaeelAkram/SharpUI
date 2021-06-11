@@ -1,22 +1,21 @@
 import styled, { css } from '@emotion/native';
 import React from 'react';
 import * as Progress from 'expo-progress';
-import { Appearance } from 'react-native';
+import { Appearance, useColorScheme } from 'react-native';
 
 export default function ProgressBar({
 	progress,
-	color = Appearance.getColorScheme() == 'dark' ? '#fff' : '#373737',
-	trackColor = Appearance.getColorScheme() == 'dark' ? '#373737' : '#ededed',
 	indeterminate = false,
 	animated = true,
 }) {
+	let colorScheme = useColorScheme()
 	return (
 		<Progress.Bar
 			style={css`
 				margin-bottom: 4px;
 			`}
-			color={color}
-			trackColor={trackColor}
+			color={colorScheme == 'dark' ? '#fff' : '#131313'}
+			trackColor={colorScheme == 'dark' ? '#373737' : '#ededed'}
 			height={5}
 			progress={progress}
 			isIndeterminate={indeterminate}

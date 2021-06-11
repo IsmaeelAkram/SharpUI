@@ -10,7 +10,7 @@ export default function ({ children, dark, autoTheme = false, width, onPress }) 
 	return (
 		<TouchableOpacity
 			style={css`
-				background-color: ${dark ? 'black' : '#ededed'};
+				background-color: ${dark ? '#131313' : '#ededed'};
 				padding: 7px 10px 7px 10px;
 				width: ${width};
 				height: 35px;
