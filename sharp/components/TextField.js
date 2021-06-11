@@ -9,7 +9,7 @@ export default function ({ placeholder, password, raw, type }) {
 	return (
 		<TextInput
 			placeholder={placeholder}
-			placeholderTextColor={Appearance.getColorScheme() == 'dark' ? '#fff' : '#474747'}
+			placeholderTextColor={colorScheme == 'dark' ? '#9d9d9d' : '#474747'}
 			secureTextEntry={password}
 			autoCapitalize={raw ? 'none' : 'sentences'}
 			autoCorrect={raw ? false : true}
@@ -18,6 +18,7 @@ export default function ({ placeholder, password, raw, type }) {
 				margin-top: 5px;
 				font-family: 'PlusJakartaSansMedium';
 				font-size: 16px;
+
 				background-color: ${colorScheme == 'dark' ? '#373737' : '#ededed'};
 				padding: 10px;
 				border-radius: 7px;
