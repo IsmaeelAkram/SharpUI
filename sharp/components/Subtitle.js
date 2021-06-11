@@ -1,9 +1,20 @@
-import styled from '@emotion/native';
-import { Appearance } from 'react-native';
+import styled, { css } from '@emotion/native';
+import { useColorScheme, Text } from 'react-native';
+import React from 'react';
 
-export default styled.Text`
-	color: ${Appearance.getColorScheme() == 'dark' ? '#fff' : '#000'};
-	font-size: 25px;
-	font-family: 'PlusJakartaSansMedium';
-	margin-bottom: 5px;
-`;
+export default function Subtitle(props) {
+	let colorScheme = useColorScheme();
+	return (
+		<Text
+			style={css`
+				color: ${colorScheme == 'dark' ? '#fff' : '#000'};
+				font-size: 25px;
+				font-family: 'PlusJakartaSansMedium';
+				margin-bottom: 5px;
+			`}
+			{...props}
+		>
+			{props.children}
+		</Text>
+	);
+}

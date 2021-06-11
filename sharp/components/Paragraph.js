@@ -1,9 +1,10 @@
 import styled, { css } from '@emotion/native';
 import React from 'react';
+import { useColorScheme } from 'react-native';
 import { Text } from 'react-native';
-import { Appearance } from 'react-native';
 
 export default function ({ children, bold, italic, size }) {
+	let colorScheme = useColorScheme();
 	let font = 'PlusJakartaSansRegular';
 	if (bold && !italic) {
 		font = 'PlusJakartaSansBold';
@@ -16,7 +17,7 @@ export default function ({ children, bold, italic, size }) {
 	return (
 		<Text
 			style={css`
-				color: ${Appearance.getColorScheme() == 'dark' ? '#fff' : '#000'};
+				color: ${colorScheme == 'dark' ? '#fff' : '#000'};
 				font-family: ${font};
 				font-size: ${size};
 			`}
