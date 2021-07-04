@@ -17,13 +17,8 @@ export default function ProgressBar({
 			style={css`
 				margin-bottom: 4px;
 			`}
-<<<<<<< HEAD
 			color={color || dark ? '#fff' : '#373737'}
 			trackColor={trackColor || dark ? '#373737' : '#ededed'}
-=======
-			color={colorScheme == 'dark' ? '#fff' : '#000'}
-			trackColor={colorScheme == 'dark' ? '#373737' : '#ededed'}
->>>>>>> 9d8831066499872a1ba36c192e6d97cacb2b681c
 			height={5}
 			progress={progress}
 			isIndeterminate={indeterminate}
