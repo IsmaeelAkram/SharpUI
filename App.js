@@ -11,7 +11,6 @@ import Carousel from './sharp/components/Carousel';
 import Paragraph from './sharp/components/Paragraph';
 import ProgressBar from './sharp/components/ProgressBar';
 import ScrollView from './sharp/components/ScrollView';
-import FlatList from './sharp/components/FlatList';
 import Subtitle from './sharp/components/Subtitle';
 import TextField from './sharp/components/TextField';
 import Title from './sharp/components/Title';
@@ -21,7 +20,7 @@ import Checkbox from './sharp/components/Checkbox';
 
 export default function App() {
 	LogBox.ignoreAllLogs();
-	let colorScheme = useColorScheme();
+
 	const [loaded, error] = useFonts(fonts);
 
 	if (!loaded) {

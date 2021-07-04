@@ -16,6 +16,8 @@ export default function ({ children, width, onPress }) {
 				justify-content: center;
 				align-items: center;
 				border-radius: 7px;
+				border-color: ${dark ? '#373737' : ''};
+				border-width: ${dark ? '1px' : ''};
 				margin-right: 10px;
 			`}
 			onPress={onPress}
