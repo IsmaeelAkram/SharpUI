@@ -5,12 +5,13 @@ import { StatusBar } from 'expo-status-bar';
 
 export default function ThemeView({ children }) {
 	let colorScheme = useColorScheme();
+	let dark = colorScheme == 'dark';
 	return (
 		<>
-			<StatusBar style={colorScheme == 'dark' ? 'light' : 'dark'} />
+			<StatusBar style={dark ? 'light' : 'dark'} />
 			<View
 				style={css`
-					background-color: ${colorScheme == 'dark' ? '#131313' : '#fff'};
+					background-color: ${dark ? '#131313' : '#fff'};
 				`}
 			>
 				{children}

@@ -6,10 +6,11 @@ import { Appearance } from 'react-native';
 
 export default function ({ placeholder, password, raw, type }) {
 	let colorScheme = useColorScheme();
+	let dark = colorScheme == 'dark';
 	return (
 		<TextInput
 			placeholder={placeholder}
-			placeholderTextColor={colorScheme == 'dark' ? '#9d9d9d' : '#474747'}
+			placeholderTextColor={dark ? '#9d9d9d' : '#373737'}
 			secureTextEntry={password}
 			autoCapitalize={raw ? 'none' : 'sentences'}
 			autoCorrect={raw ? false : true}
@@ -19,7 +20,7 @@ export default function ({ placeholder, password, raw, type }) {
 				font-family: 'PlusJakartaSansMedium';
 				font-size: 16px;
 
-				background-color: ${colorScheme == 'dark' ? '#373737' : '#ededed'};
+				background-color: ${dark ? '#373737' : '#ededed'};
 				padding: 10px;
 				border-radius: 7px;
 			`}

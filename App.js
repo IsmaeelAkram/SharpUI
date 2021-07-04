@@ -3,7 +3,8 @@ import React from 'react';
 import { LogBox, useColorScheme, View } from 'react-native';
 import styled, { css } from '@emotion/native';
 
-import Button from './sharp/components/Button';
+import DarkButton from './sharp/components/DarkButton';
+import LightButton from './sharp/components/LightButton';
 import Card from './sharp/components/Card';
 import Image from './sharp/components/Image';
 import Carousel from './sharp/components/Carousel';
@@ -59,12 +60,12 @@ export default function App() {
 					Buttons
 				</Subtitle>
 				<View style={{ flexDirection: 'row' }}>
-					<Button width={120} dark onPress={() => alert("I'm a dark button!")}>
+					<DarkButton width={120} dark onPress={() => alert("I'm a dark button!")}>
 						Dark button
-					</Button>
-					<Button width={120} onPress={() => alert("I'm a light button!")}>
+					</DarkButton>
+					<LightButton width={120} onPress={() => alert("I'm a light button!")}>
 						Light button
-					</Button>
+					</LightButton>
 				</View>
 
 				<Subtitle

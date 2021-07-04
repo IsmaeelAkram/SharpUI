@@ -4,10 +4,11 @@ import React from 'react';
 
 export default function Title(props) {
 	let colorScheme = useColorScheme();
+	let dark = colorScheme == 'dark';
 	return (
 		<Text
 			style={css`
-				color: ${colorScheme == 'dark' ? '#fff' : '#000'};
+				color: ${dark ? '#fff' : '#000'};
 				font-size: 40px;
 				font-family: 'PlusJakartaSansBold';
 				margin-bottom: 5px;

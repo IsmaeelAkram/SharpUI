@@ -5,10 +5,11 @@ import React from 'react';
 
 export default function Card(props) {
 	let colorScheme = useColorScheme();
+	let dark = colorScheme == 'dark';
 	return (
 		<TouchableOpacity
 			style={css`
-				background-color: ${colorScheme == 'dark' ? '#131313' : '#fff'};
+				background-color: ${dark ? '#131313' : '#fff'};
 				border-radius: 10px;
 				padding: 15px;
 				shadow-color: #000;

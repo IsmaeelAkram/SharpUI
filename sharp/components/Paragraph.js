@@ -5,6 +5,7 @@ import { Text } from 'react-native';
 
 export default function ({ children, bold, italic, size }) {
 	let colorScheme = useColorScheme();
+	let dark = colorScheme == 'dark';
 	let font = 'PlusJakartaSansRegular';
 	if (bold && !italic) {
 		font = 'PlusJakartaSansBold';
@@ -17,7 +18,7 @@ export default function ({ children, bold, italic, size }) {
 	return (
 		<Text
 			style={css`
-				color: ${colorScheme == 'dark' ? '#fff' : '#000'};
+				color: ${dark ? '#fff' : '#000'};
 				font-family: ${font};
 				font-size: ${size};
 			`}
