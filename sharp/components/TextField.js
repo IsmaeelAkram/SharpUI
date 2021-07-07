@@ -2,7 +2,6 @@ import styled, { css } from '@emotion/native';
 import React from 'react';
 import { useColorScheme } from 'react-native';
 import { TextInput } from 'react-native';
-import { Appearance } from 'react-native';
 
 export default function ({ placeholder, password, raw, type }) {
 	let colorScheme = useColorScheme();
@@ -20,6 +19,7 @@ export default function ({ placeholder, password, raw, type }) {
 				font-family: 'PlusJakartaSansMedium';
 				font-size: 16px;
 
+				color: ${dark ? '#fff' : '#000'};
 				background-color: ${dark ? '#373737' : '#ededed'};
 				padding: 10px;
 				border-radius: 7px;
