@@ -1,10 +1,9 @@
 import { useFonts } from 'expo-font';
 import React from 'react';
-import { LogBox, useColorScheme, View } from 'react-native';
-import styled, { css } from '@emotion/native';
+import { LogBox, View } from 'react-native';
+import { css } from '@emotion/native';
 
-import DarkButton from './sharp/components/DarkButton';
-import LightButton from './sharp/components/LightButton';
+import Button from './sharp/components/Button';
 import Card from './sharp/components/Card';
 import Image from './sharp/components/Image';
 import Carousel from './sharp/components/Carousel';
@@ -59,12 +58,12 @@ export default function App() {
 					Buttons
 				</Subtitle>
 				<View style={{ flexDirection: 'row' }}>
-					<DarkButton width={120} dark onPress={() => alert("I'm a dark button!")}>
+					<Button width={120} dark onPress={() => alert("I'm a dark button!")}>
 						Dark button
-					</DarkButton>
-					<LightButton width={120} onPress={() => alert("I'm a light button!")}>
+					</Button>
+					<Button width={120} onPress={() => alert("I'm a light button!")}>
 						Light button
-					</LightButton>
+					</Button>
 				</View>
 
 				<Subtitle
@@ -84,7 +83,7 @@ export default function App() {
 				>
 					Progress Bars
 				</Subtitle>
-				<ProgressBar progress={0.8} />
+				<ProgressBar progress={1} />
 				<ProgressBar indeterminate />
 
 				<Subtitle
